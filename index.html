@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediumArchive4furuhashilab</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+<h1>古橋研究室 Medium アーカイブ</h1>
+<p><a href="https://medium.com/furuhashilab">medium.com/furuhashilab</a> に投稿された記事のMarkdownアーカイブです。新着記事は毎日自動で追加されます。</p>
+</header>
+<main>
+<ul id="post-list"></ul>
+</main>
+
+<script>
+fetch("data/index.json")
+  .then((r) => r.json())
+  .then((data) => {
+    const list = document.getElementById("post-list");
+    if (!data.posts.length) {
+      list.innerHTML = "<li>まだアーカイブされた記事がありません。</li>";
+      return;
+    }
+    for (const post of data.posts) {
+      const li = document.createElement("li");
+
+      const a = document.createElement("a");
+      a.href = `post.html?path=${encodeURIComponent(post.path)}`;
+      a.textContent = post.title;
+      li.appendChild(a);
+
+      const meta = document.createElement("span");
+      meta.className = "meta";
+      const date = post.published_at ? post.published_at.slice(0, 10) : "";
+      const tags = post.tags.length ? "・" + post.tags.join(", ") : "";
+      meta.textContent = `${date}${tags}`;
+      li.appendChild(meta);
+
+      list.appendChild(li);
+    }
+  })
+  .catch(() => {
+    document.getElementById("post-list").innerHTML =
+      "<li>記事一覧の読み込みに失敗しました。</li>";
+  });
+</script>
+</body>
+</html>

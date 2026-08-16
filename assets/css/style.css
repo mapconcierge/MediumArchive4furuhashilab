@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light dark;
+  --fg: #1a1a1a;
+  --bg: #ffffff;
+  --muted: #666666;
+  --accent: #0a5f38;
+  --border: #e2e2e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #eaeaea;
+    --bg: #121212;
+    --muted: #a0a0a0;
+    --accent: #4fd18b;
+    --border: #2c2c2c;
+  }
+}
+
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  line-height: 1.75;
+}
+
+header p {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+}
+
+#post-list {
+  list-style: none;
+  padding: 0;
+}
+
+#post-list li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+#post-list a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#post-list a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+.source-link {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}

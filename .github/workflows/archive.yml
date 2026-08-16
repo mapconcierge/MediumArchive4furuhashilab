@@ -1,0 +1,42 @@
+name: Archive Medium posts
+
+on:
+  schedule:
+    # 03:00 UTC = 12:00 JST
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch and archive new/updated posts
+        working-directory: scripts
+        run: python archive.py
+
+      - name: Rebuild site index
+        working-directory: scripts
+        run: python build_index.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "medium-archive-bot"
+          git config user.email "actions@github.com"
+          git add posts/ assets/images/ data/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "chore: archive new/updated Medium posts"
+            git push
+          fi
