@@ -1,11 +1,54 @@
 """Shared helpers for the Medium archive pipeline."""
+from __future__ import annotations
+
 import hashlib
 import json
 import re
 from pathlib import Path
+from urllib.parse import urlparse
+
+import requests
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = REPO_ROOT / "data" / "archived_posts.json"
+
+IMAGE_FETCH_TIMEOUT = 20
+USER_AGENT = (
+    "MediumArchive4furuhashilab-bot "
+    "(+https://github.com/mapconcierge/MediumArchive4furuhashilab)"
+)
+
+
+def image_extension(url: str, content_type: str) -> str:
+    path_ext = Path(urlparse(url).path).suffix
+    if path_ext and len(path_ext) <= 5:
+        return path_ext
+    mapping = {
+        "image/jpeg": ".jpg",
+        "image/png": ".png",
+        "image/gif": ".gif",
+        "image/webp": ".webp",
+    }
+    return mapping.get(content_type, ".jpg")
+
+
+def download_image(url: str, dest_dir: Path, index: int, session: requests.Session) -> str | None:
+    try:
+        resp = session.get(url, timeout=IMAGE_FETCH_TIMEOUT)
+        resp.raise_for_status()
+    except requests.RequestException:
+        return None
+    ext = image_extension(url, resp.headers.get("Content-Type", ""))
+    filename = f"{index:03d}{ext}"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    (dest_dir / filename).write_bytes(resp.content)
+    return filename
+
+
+def new_session() -> requests.Session:
+    session = requests.Session()
+    session.headers["User-Agent"] = USER_AGENT
+    return session
 
 
 def slugify(text: str, max_len: int = 60) -> str:

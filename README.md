@@ -5,7 +5,7 @@
 ## 概要
 
 - **トラックA（自動・継続）**: GitHub ActionsがMedium公式RSSフィードを毎日ポーリングし、新着・更新記事を自動でMarkdown化して `posts/` に追加、画像は `assets/images/` にダウンロードして保存する
-- **トラックB（半自動・初回のみ）**: RSSは最新10件までしか取得できないMedium側の制約があるため、過去記事は管理者による公式データエクスポート（Medium account settings > Download your information）を取り込んでバックフィルする
+- **トラックB（半自動・初回のみ）**: RSSは最新10件までしか取得できないMedium側の制約があるため、過去記事はユーザーの実ブラウザセッション（Chrome DevToolsコンソール）で収集したデータを取り込んでバックフィルする
 
 詳細な設計・技術的制約の調査結果は [SPEC.md](SPEC.md) を参照。
 
@@ -23,7 +23,20 @@ python scripts/build_index.py
 
 GitHub Actions (`.github/workflows/archive.yml`) がこの2ステップを毎日自動実行し、差分があればコミット・pushする。
 
-過去記事のバックフィル（トラックB）は、公式エクスポートを取得後に `scripts/import_export.py` を実データに合わせて実装してから実行する（現状未実装、[SPEC.md](SPEC.md) 参照）。
+### 過去記事のバックフィル（トラックB）
+
+RSSでは取得できない過去記事は、実ブラウザセッションで収集する（GitHub Actionsからは実行不可 — Medium側のボット対策でブロックされるため。詳細は [SPEC.md](SPEC.md) 参照）。
+
+1. Chromeで https://medium.com/furuhashilab/all を開く
+2. DevTools（Cmd+Option+J）> Console を開き、[`scripts/browser_backfill.js`](scripts/browser_backfill.js) の中身を丸ごと貼り付けて実行
+3. 画面右下にカウンターが出るので、マウス/トラックパッドで実際にページを下にスクロールし続ける（無限スクロールの読み込みは本物の操作でないと発火しないため、スクリプトによる自動スクロールはできない）。カウンターが15〜20秒増えなくなったら最古の記事まで到達
+4. コンソールで `downloadPostList()` を実行（記事一覧のJSONをダウンロード）
+5. コンソールで `await fetchAllContent()` を実行（全記事の本文を取得してJSONをダウンロード。数百記事あると数分かかる）
+6. ダウンロードした `furuhashilab_full_content.json` を使って:
+   ```bash
+   python scripts/import_export.py /path/to/furuhashilab_full_content.json
+   python scripts/build_index.py
+   ```
 
 ## データソース・ライセンス
 

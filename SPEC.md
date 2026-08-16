@@ -46,18 +46,25 @@ RSSは最新10件までしか含まないため、**1回の実行間隔中に11�
 
 CI環境からは取得できないため、以下いずれかを選択する（**要ユーザー判断**）。
 
-### 案1: 公式エクスポート（採用・確定）
-`medium.com/furuhashilab` の管理者アカウントの設定 → "Download your information" から、公開済み全記事の公式データエクスポート（HTML/JSON）を取得してもらう。これを取り込むワンショットスクリプト (`scripts/import_export.py`) を用意し、トラックAと同じMarkdown形式・frontmatter仕様に正規化する。ToS完全準拠。管理者による手動操作が1回必要。
+### 案1: 公式エクスポート（不採用に変更）
+`medium.com/furuhashilab` の管理者アカウントの設定 → "Download your information" から取得できる公式データエクスポートを検討したが、**Medium公式ヘルプ（[Export your account data](https://help.medium.com/hc/en-us/articles/115004745787-Export-your-account-data)）によるとこの機能は「ログイン中のアカウント本人が書いた記事のみ」をエクスポートする個人アカウント単位の機能であり、publication単位の全記事エクスポートではない**ことが判明。実際、直近10記事だけでも著者が8名（SAKURA NAKAMIZO, INOUE RENSEI, Kanoko Fujiwara, Moe Anjo, REARA KATO, SATOAKI, Shota Arakawa, USUI CHIHANA）に分かれており、研究室公式アカウント（仮に存在しても）のエクスポートだけでは全記事をカバーできない。全執筆者（卒業生含む）に個別エクスポートを依頼するのは非現実的なため、**2026-08-17 不採用に変更**。
 
-**2026-08-16 決定**: バックフィルはこの案1で進める。管理者によるエクスポート取得を待つ間、トラックA（RSSベースの継続自動アーカイブ）とサイト表示まわりの実装を先行して進める。エクスポートのZIPが届き次第 `import_export.py` を実データに合わせて調整する（Mediumの公式エクスポートの内部フォーマットは未確認のため、実データ到着後に構造を検証してからパーサーを確定させる）。
+### 案2: 実ブラウザセッションでの半自動収集（採用・確定・実装済み）
+Claude in Chromeで実際に検証し、以下が判明・実装済み。
 
-### 案2: 実ブラウザセッションでの半自動収集
-ユーザーの手元のブラウザ（Claude in Chromeや手動操作）で `medium.com/furuhashilab/archive` にアクセスし、記事URL一覧を収集 → 各記事ページを実ブラウザで開いてHTML取得 → ローカルで同じ変換パイプラインにかける。人間の通常利用と区別がつかないため技術的には通るはずだが、CI化はできない（毎回人手が必要）。今回、この方針を試すため実際にClaude in Chromeでの動作確認を試みたが、**このセッションではブラウザ拡張が未接続で検証できなかった**。拡張を接続すれば再テスト可能。
+- `medium.com/furuhashilab/all`（`/archive` はここへリダイレクトされる）は実ブラウザセッションなら403にならず閲覧できる
+- ただし無限スクロールによる追加記事の読み込みは、**本物のマウスホイール/トラックパッド入力でないと発火しない**。`window.scrollTo()`や合成`WheelEvent`のdispatchなど、スクリプトから生成した非trustedなイベントでは追加読み込みが起きない（実機比較で確認済み）。これはDevToolsコンソールに貼り付けて実行するスクリプトにも同じ制約が及ぶ（コンソールもページのJSコンテキストで動くため、CDP経由の合成入力のような特権はない）
+- 一方、記事本文の取得は問題なし。ページが読み込まれた状態からの**同一オリジン`fetch()`（`credentials: "include"`）は個別記事URLに対して403にならず200 OKでHTMLを取得できる**。取得したHTML内の `window.__APOLLO_STATE__` に、Mediumの内部リッチテキストモデル（Paragraph配列: type/text/markups/metadata等）が完全な形で埋め込まれている
+- 画像は `miro.medium.com`（記事本文とは別ドメイン）から配信されており、こちらはCloudflareの対象外でPython `requests` から直接ダウンロード可能（Track Aで検証済みと同じ）
+
+このため実装は「収集」と「変換」を分離した:
+1. **収集**: `scripts/browser_backfill.js` をユーザーがChrome DevToolsコンソールに貼り付けて実行する。ユーザー自身が実際にマウス/トラックパッドでページをスクロールして無限読み込みを進め（スクリプトはApolloキャッシュを1秒おきにポーリングして件数を画面オーバーレイ表示するのみ）、`downloadPostList()` で記事一覧、`await fetchAllContent()` で全記事の本文（Paragraphモデル）をJSONとしてダウンロードする
+2. **変換**: `scripts/import_export.py <ダウンロードしたJSON>` が、Paragraphモデルを `scripts/paragraphs_to_md.py` でMarkdownに変換し、画像をダウンロードし、Track Aと同じ `posts/`・`assets/images/`・`data/archived_posts.json` の形式で書き出す（サンプルデータでのローカル動作確認済み、2026-08-17）
+
+**2026-08-17 決定**: バックフィルは案2で進める。収集スクリプトと変換スクリプトを実装済み。次はユーザーに `scripts/browser_backfill.js` を実行してもらい、実データで全件バックフィルする。
 
 ### 案3: バックフィルなし
-今後の新着のみ自動アーカイブし、過去記事は対象外とする。
-
-**現状の推奨は案1**。案2は追加検証が必要、案3は「すべての記事をアーカイブする」という当初要件を満たさない。
+今後の新着のみ自動アーカイブし、過去記事は対象外とする。不採用（「すべての記事をアーカイブする」という当初要件を満たさないため）。
 
 ## 3. リポジトリ構成案
 
@@ -74,7 +81,9 @@ MediumArchive4furuhashilab/
 │   ├── fetch_feed.py          # RSS取得・差分検出
 │   ├── html_to_md.py          # HTML→Markdown変換・画像DL
 │   ├── build_index.py         # index.json 再生成
-│   └── import_export.py       # (案1採用時) 公式エクスポート取込み
+│   ├── browser_backfill.js    # (Track B) DevToolsコンソール実行用の収集スクリプト
+│   ├── paragraphs_to_md.py    # (Track B) MediumのParagraphモデル→Markdown変換
+│   └── import_export.py       # (Track B) browser_backfill.jsの出力を取り込みMarkdown化
 ├── posts/
 │   └── 2026/
 │       └── 2026-08-10-example-slug.md
@@ -144,11 +153,13 @@ CLAUDE.mdの原則に従い:
 - [ ] リポジトリ Settings > Actions > General > Workflow permissions を "Read and write permissions" に変更（Actionsからのpushに必要）
 - [ ] リポジトリ Settings > Pages でソースを設定（`main` / root）
 - [ ] リポジトリの公開設定を確認（研究室の原則は基本パブリック。既にpublicか要確認）
-- [x] バックフィル方針: 案1（公式エクスポート）に決定(2026-08-16)
-- [ ] `medium.com/furuhashilab` 管理者による公式エクスポートの取得・提供（届き次第 `import_export.py` を実データに合わせて調整）
+- [x] バックフィル方針: 案1（公式エクスポート）は不採用と判明(2026-08-17)。案2（実ブラウザセッションでの半自動収集）に変更
+- [x] 収集スクリプト(`scripts/browser_backfill.js`)・変換スクリプト(`scripts/paragraphs_to_md.py`, `scripts/import_export.py`)を実装・サンプルデータで動作確認(2026-08-17)
+- [ ] ユーザーが `scripts/browser_backfill.js` を実行して全記事を収集し、`python scripts/import_export.py <JSON>` で実データをバックフィル
 
 ## 9. 未解決事項
 
-- Medium公式エクスポートの内部フォーマット（ファイル構成・HTML構造）は未確認。実データ到着後に `import_export.py` を検証・調整する
+- `scripts/paragraphs_to_md.py` はサンプルデータでの動作確認のみ。実データ全件（数百記事）でMarkdown崩れがないか、Track Bの初回実行後に目視サニティチェックが必要
+- Paragraph `type` の網羅性: 確認できたのは H2/H3/P/ULI/IMG/MIXTAPE_EMBED のみ。PRE(コードブロック)/IFRAME(埋め込み動画等)/OLI(番号リスト)は未確認の型のためフォールバック実装（プレーンテキスト化）に留まっており、実データで遭遇したら都度調整する
 - 画像の著作権（記事中の図表・写真がCC由来か、研究室独自作成かで表記が変わりうる。全件確認は非現実的なため、包括的な出典明記に留めるのが現実的）
-- Medium GraphQL API経由の非公式取得は今回不採用（Cloudflareにブロックされ、かつToSグレーゾーンのため）
+- Medium GraphQL API経由の非公式取得は今回不採用（Cloudflareにブロックされ、かつToSグレーゾーンのため）。ただし同一オリジンfetch()経由の`__APOLLO_STATE__`取得は「実ブラウザで公開ページを閲覧する」ことの範囲内と整理し、Track Bで採用した
