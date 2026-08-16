@@ -34,6 +34,20 @@ def _iso(epoch_millis) -> str:
     return datetime.fromtimestamp(epoch_millis / 1000, tz=timezone.utc).isoformat()
 
 
+def _normalize_tags(raw_tags) -> list[str]:
+    # browser_backfill.js stores post.tags as-is from Apollo's cache, which
+    # normalizes Tag entities to {"__ref": "Tag:<slug>"} references rather
+    # than inlining them. The part after "Tag:" is the tag text itself
+    # (Apollo uses it as the cache key), so no extra fetch is needed.
+    tags = []
+    for t in raw_tags or []:
+        if isinstance(t, dict) and "__ref" in t:
+            tags.append(t["__ref"].split("Tag:", 1)[-1])
+        elif isinstance(t, str):
+            tags.append(t)
+    return tags
+
+
 def process_post(post: dict, index: dict) -> bool:
     key = post["id"]
     paragraphs = post.get("paragraphs") or []
@@ -66,7 +80,7 @@ def process_post(post: dict, index: dict) -> bool:
         "published_at": published,
         "updated_at": now,
         "archived_at": archived_at,
-        "tags": post.get("tags") or [],
+        "tags": _normalize_tags(post.get("tags")),
     }
     write_markdown(abs_path, frontmatter, body_md)
 
