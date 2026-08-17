@@ -70,3 +70,14 @@ article img {
   color: var(--muted);
   margin-top: 2rem;
 }
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-row a {
+  font-size: 0.9rem;
+}

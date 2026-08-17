@@ -8,15 +8,21 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-<p><a href="index.html">&larr; 一覧へ戻る</a></p>
+<p class="nav-row">
+  <a href="index.html">&larr; 一覧へ戻る</a>
+  <a id="md-source-link" href="#" target="_blank" rel="noopener" hidden>Markdown Source</a>
+</p>
 <article id="post-body">読み込み中...</article>
 <p class="source-link" id="source-link"></p>
 
 <script>
+const GITHUB_BLOB_BASE = "https://github.com/mapconcierge/MediumArchive4furuhashilab/blob/main/";
+
 const params = new URLSearchParams(location.search);
 const path = params.get("path");
 const body = document.getElementById("post-body");
 const sourceLink = document.getElementById("source-link");
+const mdSourceLink = document.getElementById("md-source-link");
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
@@ -33,9 +39,27 @@ function parseFrontmatter(raw) {
   return { meta, body: match[2] };
 }
 
+// Markdown files reference images/links relative to their own directory
+// (e.g. "../../assets/images/..."), but this page lives at the site root,
+// so the browser would otherwise resolve them relative to post.html instead
+// of the post's own folder. Resolve every img/a href against the post's
+// directory after rendering.
+function resolveRelativeUrls(container, postPath) {
+  const postDir = new URL(postPath.slice(0, postPath.lastIndexOf("/") + 1), location.href);
+  container.querySelectorAll("img[src], a[href]").forEach((el) => {
+    const attr = el.tagName === "IMG" ? "src" : "href";
+    const value = el.getAttribute(attr);
+    if (!value || /^([a-z]+:)?\/\//i.test(value) || value.startsWith("#")) return;
+    el.setAttribute(attr, new URL(value, postDir).href);
+  });
+}
+
 if (!path) {
   body.textContent = "記事が指定されていません。";
 } else {
+  mdSourceLink.href = GITHUB_BLOB_BASE + path.split("/").map(encodeURIComponent).join("/");
+  mdSourceLink.hidden = false;
+
   fetch(path)
     .then((r) => {
       if (!r.ok) throw new Error("not found");
@@ -44,6 +68,7 @@ if (!path) {
     .then((raw) => {
       const { meta, body: md } = parseFrontmatter(raw);
       body.innerHTML = marked.parse(md);
+      resolveRelativeUrls(body, path);
       if (meta.medium_url) {
         sourceLink.innerHTML = `原文: <a href="${meta.medium_url}">${meta.medium_url}</a>`;
       }
