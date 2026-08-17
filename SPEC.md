@@ -155,7 +155,7 @@ CLAUDE.mdの原則に従い:
 - [ ] リポジトリの公開設定を確認（研究室の原則は基本パブリック。既にpublicか要確認）
 - [x] バックフィル方針: 案1（公式エクスポート）は不採用と判明(2026-08-17)。案2（実ブラウザセッションでの半自動収集）に変更
 - [x] 収集スクリプト(`scripts/browser_backfill.js`)・変換スクリプト(`scripts/paragraphs_to_md.py`, `scripts/import_export.py`)を実装・サンプルデータで動作確認(2026-08-17)
-- [ ] ユーザーが `scripts/browser_backfill.js` を実行して全記事を収集し、`python scripts/import_export.py <JSON>` で実データをバックフィル
+- [x] バックフィル実行完了(2026-08-17): 1653記事（2017-10-26〜2026-07-21、111名の著者）・画像6389枚を取り込み。同日・類似タイトルの衝突5組を`unique_post_path`で解消（`scripts/lib.py`）。リポジトリ合計サイズ約2.5GB
 
 ## 9. 未解決事項
 

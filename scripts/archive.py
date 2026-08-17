@@ -1,7 +1,6 @@
 """Track A: fetch new/updated posts from the Medium RSS feed and archive them
 as Markdown. Run via .github/workflows/archive.yml (or manually)."""
 from datetime import datetime, timezone
-from pathlib import Path
 
 from fetch_feed import fetch_entries
 from html_to_md import html_to_markdown
@@ -11,6 +10,7 @@ from lib import (
     load_archived_index,
     save_archived_index,
     slugify,
+    unique_post_path,
     write_markdown,
 )
 
@@ -37,7 +37,7 @@ def process_entry(entry: dict, index: dict) -> bool:
     year = date_str[:4]
     slug = slugify(entry["title"])
 
-    rel_path = Path("posts") / year / f"{date_str}-{slug}.md"
+    rel_path = unique_post_path(year, date_str, slug, key, index)
     abs_path = REPO_ROOT / rel_path
 
     image_dir_name = f"{date_str}-{slug}"

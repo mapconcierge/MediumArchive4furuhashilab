@@ -61,6 +61,20 @@ def content_hash(text: str) -> str:
     return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def unique_post_path(year: str, date_str: str, slug: str, key: str, index: dict) -> Path:
+    """posts/{year}/{date}-{slug}.md, disambiguated with -2/-3/... if another
+    post (different guid) already claims that path — same date + near-identical
+    titles happens often enough across ~1600 posts by different authors."""
+    base = f"{date_str}-{slug}"
+    candidate = f"{base}.md"
+    n = 2
+    taken = {v["path"] for k, v in index.items() if k != key}
+    while str(Path("posts") / year / candidate) in taken:
+        candidate = f"{base}-{n}.md"
+        n += 1
+    return Path("posts") / year / candidate
+
+
 def load_archived_index() -> dict:
     if INDEX_PATH.exists():
         return json.loads(INDEX_PATH.read_text(encoding="utf-8"))

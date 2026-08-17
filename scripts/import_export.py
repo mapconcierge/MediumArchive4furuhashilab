@@ -23,6 +23,7 @@ from lib import (
     load_archived_index,
     save_archived_index,
     slugify,
+    unique_post_path,
     write_markdown,
 )
 from paragraphs_to_md import paragraphs_to_markdown
@@ -63,7 +64,7 @@ def process_post(post: dict, index: dict) -> bool:
     year = date_str[:4]
     slug = slugify(post.get("title") or post.get("uniqueSlug") or key)
 
-    rel_path = Path("posts") / year / f"{date_str}-{slug}.md"
+    rel_path = unique_post_path(year, date_str, slug, key, index)
     abs_path = REPO_ROOT / rel_path
 
     image_dir_name = f"{date_str}-{slug}"
