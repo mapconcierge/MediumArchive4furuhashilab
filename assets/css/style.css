@@ -31,6 +31,27 @@ header p {
   color: var(--muted);
 }
 
+.version-badge {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--muted);
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.version-badge a {
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  text-decoration: none;
+}
+
+.version-badge a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 a {
   color: var(--accent);
 }
