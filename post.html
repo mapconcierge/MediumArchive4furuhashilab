@@ -12,6 +12,8 @@
   <a href="index.html">&larr; 一覧へ戻る</a>
   <a id="md-source-link" href="#" target="_blank" rel="noopener" hidden>Markdown Source</a>
 </p>
+<h1 id="post-title"></h1>
+<p class="meta" id="post-meta"></p>
 <article id="post-body">読み込み中...</article>
 <p class="source-link" id="source-link"></p>
 
@@ -20,23 +22,15 @@ const GITHUB_BLOB_BASE = "https://github.com/mapconcierge/MediumArchive4furuhash
 
 const params = new URLSearchParams(location.search);
 const path = params.get("path");
+const titleEl = document.getElementById("post-title");
+const metaEl = document.getElementById("post-meta");
 const body = document.getElementById("post-body");
 const sourceLink = document.getElementById("source-link");
 const mdSourceLink = document.getElementById("md-source-link");
 
-function parseFrontmatter(raw) {
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-  if (!match) return { meta: {}, body: raw };
-  const meta = {};
-  for (const line of match[1].split("\n")) {
-    const i = line.indexOf(":");
-    if (i === -1) continue;
-    const key = line.slice(0, i).trim();
-    let value = line.slice(i + 1).trim();
-    if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
-    meta[key] = value;
-  }
-  return { meta, body: match[2] };
+function stripFrontmatter(raw) {
+  const match = raw.match(/^---\n[\s\S]*?\n---\n?([\s\S]*)$/);
+  return match ? match[1] : raw;
 }
 
 // Markdown files reference images/links relative to their own directory
@@ -54,23 +48,69 @@ function resolveRelativeUrls(container, postPath) {
   });
 }
 
+function renderMeta(post) {
+  metaEl.innerHTML = "";
+
+  function addSeparator() {
+    if (metaEl.childNodes.length) metaEl.appendChild(document.createTextNode(" ・ "));
+  }
+
+  const date = post.published_at ? post.published_at.slice(0, 10) : "";
+  if (date) metaEl.appendChild(document.createTextNode(date));
+
+  if (post.author) {
+    addSeparator();
+    if (post.author_username) {
+      const authorLink = document.createElement("a");
+      authorLink.href = `https://medium.com/@${post.author_username}`;
+      authorLink.target = "_blank";
+      authorLink.rel = "noopener";
+      authorLink.textContent = post.author;
+      metaEl.appendChild(authorLink);
+    } else {
+      metaEl.appendChild(document.createTextNode(post.author));
+    }
+  }
+
+  if (post.tags && post.tags.length) {
+    addSeparator();
+    post.tags.forEach((tag, i) => {
+      if (i > 0) metaEl.appendChild(document.createTextNode(", "));
+      const tagLink = document.createElement("a");
+      tagLink.href = `https://medium.com/furuhashilab/all?topic=${encodeURIComponent(tag)}`;
+      tagLink.target = "_blank";
+      tagLink.rel = "noopener";
+      tagLink.textContent = tag;
+      metaEl.appendChild(tagLink);
+    });
+  }
+}
+
 if (!path) {
   body.textContent = "記事が指定されていません。";
 } else {
   mdSourceLink.href = GITHUB_BLOB_BASE + path.split("/").map(encodeURIComponent).join("/");
   mdSourceLink.hidden = false;
 
-  fetch(path)
-    .then((r) => {
+  Promise.all([
+    fetch("data/index.json").then((r) => (r.ok ? r.json() : { posts: [] })),
+    fetch(path).then((r) => {
       if (!r.ok) throw new Error("not found");
       return r.text();
-    })
-    .then((raw) => {
-      const { meta, body: md } = parseFrontmatter(raw);
-      body.innerHTML = marked.parse(md);
+    }),
+  ])
+    .then(([index, raw]) => {
+      const post = index.posts.find((p) => p.path === path) || {};
+
+      titleEl.textContent = post.title || path;
+      document.title = post.title ? `${post.title} - MediumArchive4furuhashilab` : "記事 - MediumArchive4furuhashilab";
+      renderMeta(post);
+
+      body.innerHTML = marked.parse(stripFrontmatter(raw));
       resolveRelativeUrls(body, path);
-      if (meta.medium_url) {
-        sourceLink.innerHTML = `原文: <a href="${meta.medium_url}">${meta.medium_url}</a>`;
+
+      if (post.medium_url) {
+        sourceLink.innerHTML = `原文: <a href="${post.medium_url}">${post.medium_url}</a>`;
       }
     })
     .catch(() => {
