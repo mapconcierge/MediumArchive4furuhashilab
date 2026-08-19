@@ -27,6 +27,17 @@ def process_entry(entry: dict, index: dict) -> bool:
     key = _guid_key(entry["guid"])
     new_hash = content_hash(entry["content_html"])
     existing = index.get(key)
+
+    if existing and existing.get("source") != "track_a":
+        # Already archived by Track B (scripts/import_export.py), which hashes
+        # Medium's internal paragraph model rather than RSS HTML. The two
+        # hash schemes never agree even when content is unchanged, so without
+        # this check Track A would re-derive (and overwrite with a lower
+        # fidelity version of) every post Track B already archived, on every
+        # single run. Leave Track B's version alone; only Track A's own
+        # entries get re-hash-checked for edits below.
+        return False
+
     if existing and existing["content_hash"] == new_hash:
         return False  # already archived and unchanged
 
@@ -59,6 +70,7 @@ def process_entry(entry: dict, index: dict) -> bool:
     write_markdown(abs_path, frontmatter, body_md)
 
     index[key] = {
+        "source": "track_a",
         "path": str(rel_path),
         "title": entry["title"],
         "author": entry["author"],

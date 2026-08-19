@@ -86,6 +86,7 @@ def process_post(post: dict, index: dict) -> bool:
     write_markdown(abs_path, frontmatter, body_md)
 
     index[key] = {
+        "source": "track_b",
         "path": str(rel_path),
         "title": frontmatter["title"],
         "author": frontmatter["author"],
