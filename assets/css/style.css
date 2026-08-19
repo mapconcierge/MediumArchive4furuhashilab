@@ -33,7 +33,7 @@ body {
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  height: clamp(180px, 30vw, 380px);
+  height: clamp(240px, 42vw, 520px);
   overflow: hidden;
   margin-top: -2rem;
   margin-bottom: 2rem;
@@ -43,7 +43,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  /* Keep the circled "FURUHASHI" face (near the top of the photo) in frame. */
+  object-position: center 12%;
   display: block;
   filter: saturate(1.05);
 }
