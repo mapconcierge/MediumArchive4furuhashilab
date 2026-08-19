@@ -118,6 +118,15 @@ header p {
   animation: walker-bob 0.4s ease-in-out infinite alternate;
 }
 
+/* 2コマ足踏みアニメーション: 左右の脚を steps(1) で瞬時に切り替える。 */
+.step-frame {
+  animation: step-flip 0.4s steps(1) infinite;
+}
+
+.step-frame-b {
+  animation-delay: -0.2s;
+}
+
 @keyframes walker-cross {
   0% {
     left: -28px;
@@ -129,17 +138,33 @@ header p {
 
 @keyframes walker-bob {
   from {
-    transform: translateY(0) rotate(-5deg);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(-3px) rotate(5deg);
+    transform: translateY(-2.5px);
+  }
+}
+
+@keyframes step-flip {
+  0%,
+  49.9% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .walker,
-  .walker-bob {
+  .walker-bob,
+  .step-frame {
     animation: none;
+  }
+
+  .step-frame-b {
+    opacity: 0;
   }
 }
 
