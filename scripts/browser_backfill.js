@@ -117,6 +117,7 @@
               firstPublishedAt: post.firstPublishedAt,
               tags: post.tags || [],
               author: creator ? creator.name : null,
+              authorUsername: creator ? creator.username : null,
               paragraphs,
             });
           } else {

@@ -76,6 +76,7 @@ def process_post(post: dict, index: dict) -> bool:
     frontmatter = {
         "title": post.get("title") or "",
         "author": post.get("author") or "furuhashilab",
+        "author_username": post.get("authorUsername") or "",
         "medium_url": post.get("mediumUrl") or "",
         "medium_guid": key,
         "published_at": published,
@@ -90,6 +91,7 @@ def process_post(post: dict, index: dict) -> bool:
         "path": str(rel_path),
         "title": frontmatter["title"],
         "author": frontmatter["author"],
+        "author_username": frontmatter["author_username"],
         "medium_url": frontmatter["medium_url"],
         "content_hash": new_hash,
         "published_at": published,

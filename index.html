@@ -40,9 +40,41 @@ fetch("data/index.json")
 
       const meta = document.createElement("span");
       meta.className = "meta";
+
+      function addSeparator() {
+        if (meta.childNodes.length) meta.appendChild(document.createTextNode(" ・ "));
+      }
+
       const date = post.published_at ? post.published_at.slice(0, 10) : "";
-      const parts = [date, post.author, post.tags.length ? post.tags.join(", ") : ""].filter(Boolean);
-      meta.textContent = parts.join(" ・ ");
+      if (date) meta.appendChild(document.createTextNode(date));
+
+      if (post.author) {
+        addSeparator();
+        if (post.author_username) {
+          const authorLink = document.createElement("a");
+          authorLink.href = `https://medium.com/@${post.author_username}`;
+          authorLink.target = "_blank";
+          authorLink.rel = "noopener";
+          authorLink.textContent = post.author;
+          meta.appendChild(authorLink);
+        } else {
+          meta.appendChild(document.createTextNode(post.author));
+        }
+      }
+
+      if (post.tags.length) {
+        addSeparator();
+        post.tags.forEach((tag, i) => {
+          if (i > 0) meta.appendChild(document.createTextNode(", "));
+          const tagLink = document.createElement("a");
+          tagLink.href = `https://medium.com/furuhashilab/all?topic=${encodeURIComponent(tag)}`;
+          tagLink.target = "_blank";
+          tagLink.rel = "noopener";
+          tagLink.textContent = tag;
+          meta.appendChild(tagLink);
+        });
+      }
+
       li.appendChild(meta);
 
       list.appendChild(li);
