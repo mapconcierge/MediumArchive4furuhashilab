@@ -90,7 +90,8 @@ header p {
   font-size: 0.8rem;
 }
 
-/* シンプルな棒人間が、点線の道を歩き続けるギミック。 */
+/* 棒人間が、点線の道を歩き続けるギミック。最初は1人、途中から3人、
+   最後は7人くらいの集団になって歩いてくる(1 + 2 + 4 = 7)。 */
 .walk-track {
   position: relative;
   height: 36px;
@@ -107,15 +108,28 @@ header p {
   border-bottom: 1px dashed var(--border);
 }
 
-.walker {
+.walker-group {
   position: absolute;
   top: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
   color: var(--accent);
-  animation: walker-cross 8s linear infinite;
+  animation: walker-cross 12s linear infinite;
 }
 
 .walker-bob {
   animation: walker-bob 0.4s ease-in-out infinite alternate;
+}
+
+/* 33%地点で2人合流(計3人)、66%地点でさらに4人合流(計7人)。
+   walker-crossと同じ12sの周期に位相を合わせている。 */
+.walker-late-b {
+  animation: join-group-b 12s steps(1) infinite;
+}
+
+.walker-late-c {
+  animation: join-group-c 12s steps(1) infinite;
 }
 
 /* 2コマ足踏みアニメーション: 左右の脚を steps(1) で瞬時に切り替える。 */
@@ -145,6 +159,28 @@ header p {
   }
 }
 
+@keyframes join-group-b {
+  0%,
+  32.9% {
+    opacity: 0;
+  }
+  33%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes join-group-c {
+  0%,
+  65.9% {
+    opacity: 0;
+  }
+  66%,
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes step-flip {
   0%,
   49.9% {
@@ -157,13 +193,17 @@ header p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .walker,
+  .walker-group,
   .walker-bob,
-  .step-frame {
+  .step-frame,
+  .walker-late-b,
+  .walker-late-c {
     animation: none;
   }
 
-  .step-frame-b {
+  .step-frame-b,
+  .walker-late-b,
+  .walker-late-c {
     opacity: 0;
   }
 }
