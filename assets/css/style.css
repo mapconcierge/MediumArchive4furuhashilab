@@ -90,8 +90,10 @@ header p {
   font-size: 0.8rem;
 }
 
-/* 棒人間が、点線の道を歩き続けるギミック。最初は1人、途中から3人、
-   最後は7人くらいの集団になって歩いてくる(1 + 2 + 4 = 7)。 */
+/* 棒人間が、点線の道を順番に横断していくギミック。
+   1人が渡りきって消える → 3人の集団が渡りきって消える →
+   7人の集団が渡りきって消える → 最初に戻る、の3幕構成。
+   各幕は重ならず、前の幕が画面外に消えてから次の幕が現れる。 */
 .walk-track {
   position: relative;
   height: 36px;
@@ -108,28 +110,31 @@ header p {
   border-bottom: 1px dashed var(--border);
 }
 
-.walker-group {
+.lap {
   position: absolute;
   top: 0;
   display: flex;
   align-items: flex-end;
   gap: 3px;
   color: var(--accent);
-  animation: walker-cross 12s linear infinite;
+}
+
+/* 全体を18秒周期とし、0-33%を1人、33-66%を3人、66-100%を7人の幕にする。
+   自分の幕以外は画面外(トラック分の負のleft)に留めておく。 */
+.lap-1 {
+  animation: lap1-cross 18s linear infinite;
+}
+
+.lap-2 {
+  animation: lap2-cross 18s linear infinite;
+}
+
+.lap-3 {
+  animation: lap3-cross 18s linear infinite;
 }
 
 .walker-bob {
   animation: walker-bob 0.4s ease-in-out infinite alternate;
-}
-
-/* 33%地点で2人合流(計3人)、66%地点でさらに4人合流(計7人)。
-   walker-crossと同じ12sの周期に位相を合わせている。 */
-.walker-late-b {
-  animation: join-group-b 12s steps(1) infinite;
-}
-
-.walker-late-c {
-  animation: join-group-c 12s steps(1) infinite;
 }
 
 /* 2コマ足踏みアニメーション: 左右の脚を steps(1) で瞬時に切り替える。 */
@@ -141,9 +146,37 @@ header p {
   animation-delay: -0.2s;
 }
 
-@keyframes walker-cross {
+@keyframes lap1-cross {
   0% {
-    left: -28px;
+    left: -24px;
+  }
+  33.33% {
+    left: 100%;
+  }
+  33.34%,
+  100% {
+    left: -24px;
+  }
+}
+
+@keyframes lap2-cross {
+  0%,
+  33.33% {
+    left: -70px;
+  }
+  66.66% {
+    left: 100%;
+  }
+  66.67%,
+  100% {
+    left: -70px;
+  }
+}
+
+@keyframes lap3-cross {
+  0%,
+  66.66% {
+    left: -162px;
   }
   100% {
     left: 100%;
@@ -159,28 +192,6 @@ header p {
   }
 }
 
-@keyframes join-group-b {
-  0%,
-  32.9% {
-    opacity: 0;
-  }
-  33%,
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes join-group-c {
-  0%,
-  65.9% {
-    opacity: 0;
-  }
-  66%,
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes step-flip {
   0%,
   49.9% {
@@ -193,18 +204,21 @@ header p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .walker-group,
+  .lap-1,
+  .lap-2,
+  .lap-3,
   .walker-bob,
-  .step-frame,
-  .walker-late-b,
-  .walker-late-c {
+  .step-frame {
     animation: none;
   }
 
-  .step-frame-b,
-  .walker-late-b,
-  .walker-late-c {
+  .step-frame-b {
     opacity: 0;
+  }
+
+  .lap-2,
+  .lap-3 {
+    display: none;
   }
 }
 
