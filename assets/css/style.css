@@ -90,6 +90,59 @@ header p {
   font-size: 0.8rem;
 }
 
+/* 伊能忠敬を模した測量棒を持つキャラクターが、点線の道を歩き続けるギミック。 */
+.inou-walk-track {
+  position: relative;
+  height: 40px;
+  margin: 0.5rem 0 0.25rem;
+  overflow: hidden;
+}
+
+.inou-walk-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.inou-walker {
+  position: absolute;
+  top: 0;
+  color: var(--accent);
+  animation: inou-cross 9s linear infinite;
+}
+
+.inou-bob {
+  animation: inou-bob 0.45s ease-in-out infinite alternate;
+}
+
+@keyframes inou-cross {
+  0% {
+    left: -32px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes inou-bob {
+  from {
+    transform: translateY(0) rotate(-4deg);
+  }
+  to {
+    transform: translateY(-3px) rotate(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inou-walker,
+  .inou-bob {
+    animation: none;
+  }
+}
+
 .version-badge {
   font-size: 0.75rem;
   font-weight: 400;
