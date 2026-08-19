@@ -61,6 +61,7 @@ def process_entry(entry: dict, index: dict) -> bool:
     index[key] = {
         "path": str(rel_path),
         "title": entry["title"],
+        "author": entry["author"],
         "medium_url": entry["link"],
         "content_hash": new_hash,
         "published_at": published,

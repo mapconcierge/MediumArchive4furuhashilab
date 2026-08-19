@@ -31,6 +31,31 @@ header p {
   color: var(--muted);
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-top h1 {
+  margin: 0;
+}
+
+.github-icon-link {
+  flex-shrink: 0;
+  color: var(--fg);
+  display: inline-flex;
+}
+
+.github-icon-link:hover {
+  color: var(--accent);
+}
+
+.license-line {
+  font-size: 0.8rem;
+}
+
 .version-badge {
   font-size: 0.75rem;
   font-weight: 400;

@@ -88,6 +88,7 @@ def process_post(post: dict, index: dict) -> bool:
     index[key] = {
         "path": str(rel_path),
         "title": frontmatter["title"],
+        "author": frontmatter["author"],
         "medium_url": frontmatter["medium_url"],
         "content_hash": new_hash,
         "published_at": published,

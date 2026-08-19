@@ -14,6 +14,7 @@ def main() -> None:
             {
                 "guid": guid,
                 "title": rec["title"],
+                "author": rec.get("author", ""),
                 "path": rec["path"],
                 "medium_url": rec["medium_url"],
                 "published_at": rec.get("published_at", ""),
