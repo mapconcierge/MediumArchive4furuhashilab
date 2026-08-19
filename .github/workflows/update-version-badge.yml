@@ -1,0 +1,47 @@
+name: Update version badge
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Update version badge in index.html
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+
+          tag = os.environ["RELEASE_TAG"]
+          path = "index.html"
+          text = open(path, encoding="utf-8").read()
+          new_text = re.sub(
+              r'(releases/tag/)v\d+\.\d+\.\d+(">)v\d+\.\d+\.\d+',
+              rf'\g<1>{tag}\g<2>{tag}',
+              text,
+          )
+          open(path, "w", encoding="utf-8").write(new_text)
+          PY
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "medium-archive-bot"
+          git config user.email "actions@github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "no changes (badge already up to date, or pattern didn't match)"
+          else
+            git commit -m "chore: update version badge to ${{ github.event.release.tag_name }}"
+            git push
+          fi
