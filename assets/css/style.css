@@ -119,31 +119,33 @@ header p {
   color: var(--accent);
 }
 
-/* 全体を18秒周期とし、0-33%を1人、33-66%を3人、66-100%を7人の幕にする。
+/* 全体を36秒周期とし、0-33%を1人、33-66%を3人、66-100%を7人の幕にする
+   (通常速度の半分でゆっくり歩かせている)。
    自分の幕以外は画面外(トラック分の負のleft)に留めておく。 */
 .lap-1 {
-  animation: lap1-cross 18s linear infinite;
+  animation: lap1-cross 36s linear infinite;
 }
 
 .lap-2 {
-  animation: lap2-cross 18s linear infinite;
+  animation: lap2-cross 36s linear infinite;
 }
 
 .lap-3 {
-  animation: lap3-cross 18s linear infinite;
+  animation: lap3-cross 36s linear infinite;
 }
 
 .walker-bob {
-  animation: walker-bob 0.4s ease-in-out infinite alternate;
+  animation: walker-bob 0.8s ease-in-out infinite alternate;
 }
 
-/* 2コマ足踏みアニメーション: 左右の脚を steps(1) で瞬時に切り替える。 */
+/* 2コマ足踏みアニメーション: 左右の脚を steps(1) で瞬時に切り替える。
+   横断速度を半分にしたのに合わせて歩調も半分に。 */
 .step-frame {
-  animation: step-flip 0.4s steps(1) infinite;
+  animation: step-flip 0.8s steps(1) infinite;
 }
 
 .step-frame-b {
-  animation-delay: -0.2s;
+  animation-delay: -0.4s;
 }
 
 @keyframes lap1-cross {
