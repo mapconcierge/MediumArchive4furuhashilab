@@ -270,14 +270,14 @@
   "0779c538fb61": {
     "archived_at": "2026-09-15T08:26:23+00:00",
     "author": "Miwa Yonekubo",
-    "content_hash": "sha256:75413982754b3f1a87dc5dfb142e0b79d8108d0fbc1a2dac8b82099de6b6ba8d",
+    "content_hash": "sha256:b91feb564c69fde4c3c17fd9305d2bb9fd300f6ea9eb06a01811536224bb6d6b",
     "medium_url": "https://medium.com/furuhashilab/foss4g-hiroshima-0779c538fb61",
     "path": "posts/2026/2026-09-14-foss4g-hiroshima.md",
     "published_at": "2026-09-14T12:06:07+00:00",
     "source": "track_a",
     "tags": [],
     "title": "FOSS4G Hiroshima",
-    "updated_at": "2026-09-15T08:26:23+00:00"
+    "updated_at": "2026-09-16T08:20:13+00:00"
   },
   "077d93c74679": {
     "archived_at": "2026-08-17T08:17:05+09:00",
@@ -3853,6 +3853,18 @@
     "tags": [],
     "title": "妖怪ウォッチワールド",
     "updated_at": "2026-08-17T09:00:47+09:00"
+  },
+  "326fda1452c9": {
+    "archived_at": "2026-09-16T08:20:12+00:00",
+    "author": "Shota Arakawa",
+    "content_hash": "sha256:a429cae59c582c1089b324bf71d699e7cad7e47fa404eb3075e9291eb5ec8eab",
+    "medium_url": "https://medium.com/furuhashilab/%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E3%81%A3%E3%81%A6%E3%82%84%E3%81%A3%E3%81%B1%E3%82%8A%E6%A5%BD%E3%81%97%E3%81%84%E3%81%AA%E3%81%82-326fda1452c9",
+    "path": "posts/2026/2026-09-15-国際会議ってやっぱり楽しいなあ.md",
+    "published_at": "2026-09-15T11:35:21+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "国際会議ってやっぱり楽しいなあ",
+    "updated_at": "2026-09-16T08:20:12+00:00"
   },
   "32847731cc91": {
     "archived_at": "2026-08-17T08:37:50+09:00",
@@ -13159,6 +13171,18 @@
     "tags": [],
     "title": "Ingress特集③〜特徴と問題点〜",
     "updated_at": "2026-08-17T09:03:29+09:00"
+  },
+  "8fe5535d3860": {
+    "archived_at": "2026-09-16T08:20:10+00:00",
+    "author": "INADA YUKA",
+    "content_hash": "sha256:ed13d82c83061c6b00cfad8bd340191b5b343ac69b8331e896539a0f326a5e13",
+    "medium_url": "https://medium.com/furuhashilab/sotm-asia-2026-osaka-8fe5535d3860",
+    "path": "posts/2026/2026-09-16-sotm-asia-2026-osaka.md",
+    "published_at": "2026-09-16T08:18:44+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "SotM Asia 2026 Osaka",
+    "updated_at": "2026-09-16T08:20:10+00:00"
   },
   "900cc5d2692d": {
     "archived_at": "2026-08-17T07:59:45+09:00",

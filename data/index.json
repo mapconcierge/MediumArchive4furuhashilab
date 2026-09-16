@@ -1,6 +1,28 @@
 {
   "posts": [
     {
+      "guid": "8fe5535d3860",
+      "title": "SotM Asia 2026 Osaka",
+      "author": "INADA YUKA",
+      "author_username": "",
+      "path": "posts/2026/2026-09-16-sotm-asia-2026-osaka.md",
+      "medium_url": "https://medium.com/furuhashilab/sotm-asia-2026-osaka-8fe5535d3860",
+      "published_at": "2026-09-16T08:18:44+00:00",
+      "updated_at": "2026-09-16T08:20:10+00:00",
+      "tags": []
+    },
+    {
+      "guid": "326fda1452c9",
+      "title": "国際会議ってやっぱり楽しいなあ",
+      "author": "Shota Arakawa",
+      "author_username": "",
+      "path": "posts/2026/2026-09-15-国際会議ってやっぱり楽しいなあ.md",
+      "medium_url": "https://medium.com/furuhashilab/%E5%9B%BD%E9%9A%9B%E4%BC%9A%E8%AD%B0%E3%81%A3%E3%81%A6%E3%82%84%E3%81%A3%E3%81%B1%E3%82%8A%E6%A5%BD%E3%81%97%E3%81%84%E3%81%AA%E3%81%82-326fda1452c9",
+      "published_at": "2026-09-15T11:35:21+00:00",
+      "updated_at": "2026-09-16T08:20:12+00:00",
+      "tags": []
+    },
+    {
       "guid": "0779c538fb61",
       "title": "FOSS4G Hiroshima",
       "author": "Miwa Yonekubo",
@@ -8,7 +30,7 @@
       "path": "posts/2026/2026-09-14-foss4g-hiroshima.md",
       "medium_url": "https://medium.com/furuhashilab/foss4g-hiroshima-0779c538fb61",
       "published_at": "2026-09-14T12:06:07+00:00",
-      "updated_at": "2026-09-15T08:26:23+00:00",
+      "updated_at": "2026-09-16T08:20:13+00:00",
       "tags": []
     },
     {
