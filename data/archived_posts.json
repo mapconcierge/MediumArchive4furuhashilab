@@ -7670,6 +7670,18 @@
     "title": "八百万クエスト",
     "updated_at": "2026-08-17T08:57:07+09:00"
   },
+  "5732d819a521": {
+    "archived_at": "2026-09-20T08:20:47+00:00",
+    "author": "YUTO Watanabe",
+    "content_hash": "sha256:02397830547bbbaa0db0bdbcdaf14e1b037907740d438e1edb3f69ac49ca4cfb",
+    "medium_url": "https://medium.com/furuhashilab/%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF-%E6%B8%A1%E8%BE%BA%E3%81%A7%E3%81%99-%E4%BB%8A%E5%9B%9E%E3%81%AF-state-of-the-map-asia-2026-osaka-%E4%BB%A5%E4%B8%8B-sotm-%E3%81%AB%E9%81%8B%E5%96%B6-%E3%81%9D%E3%81%97%E3%81%A6%E7%99%BB%E5%A3%87%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%A6%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F-%E3%81%9D%E3%81%AE%E5%A0%B1%E5%91%8A%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99-5732d819a521",
+    "path": "posts/2026/2026-09-19-state-of-the-map-asia-2026-osaka参加レポート.md",
+    "published_at": "2026-09-19T08:15:56+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "State of the map Asia 2026 Osaka参加レポート",
+    "updated_at": "2026-09-20T08:20:47+00:00"
+  },
   "5753fd30b9c5": {
     "archived_at": "2026-08-17T08:56:15+09:00",
     "author": "Misa",
@@ -13984,6 +13996,18 @@
     ],
     "title": "アドベントカレンダー 12/4( 水)",
     "updated_at": "2026-08-17T08:47:01+09:00"
+  },
+  "961a90d5ce72": {
+    "archived_at": "2026-09-20T08:20:44+00:00",
+    "author": "USUI CHIHANA",
+    "content_hash": "sha256:96e4616bed75dfb3b9ce2812a8e70906135b182df19a108aa089546b17df7c89",
+    "medium_url": "https://medium.com/furuhashilab/sotm-asia-2026-osaka%E3%81%AB%E5%8F%82%E5%8A%A0%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F-961a90d5ce72",
+    "path": "posts/2026/2026-09-20-sotm-asia-2026-osakaに参加しました.md",
+    "published_at": "2026-09-20T07:53:24+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "SotM Asia 2026 Osakaに参加しました！",
+    "updated_at": "2026-09-20T08:20:44+00:00"
   },
   "9688d521ca53": {
     "archived_at": "2026-08-17T08:45:17+09:00",
