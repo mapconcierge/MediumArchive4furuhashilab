@@ -10439,6 +10439,18 @@
     "title": "地図界の革命！Mapboxで修行開始だ！",
     "updated_at": "2026-08-17T08:46:38+09:00"
   },
+  "73d38552fa9f": {
+    "archived_at": "2026-09-21T08:39:07+00:00",
+    "author": "AkiraMotoyoshi",
+    "content_hash": "sha256:f1cd6f288028549eadb46f87e1d22ad0bb7becb0e56f3b4e928071996bd6b1b3",
+    "medium_url": "https://medium.com/furuhashilab/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9B%E3%82%B9%E3%83%88-73d38552fa9f",
+    "path": "posts/2026/2026-09-21-初めてのエクスカーションホスト.md",
+    "published_at": "2026-09-21T08:30:36+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "初めてのエクスカーションホスト！",
+    "updated_at": "2026-09-21T08:39:07+00:00"
+  },
   "742fdf3012f6": {
     "archived_at": "2026-08-17T08:18:13+09:00",
     "author": "SATOAKI",
@@ -14570,6 +14582,18 @@
     "tags": [],
     "title": "YouthMappers AGU 2021 to 2022",
     "updated_at": "2026-08-17T08:31:24+09:00"
+  },
+  "9c3a1c683845": {
+    "archived_at": "2026-09-21T08:39:08+00:00",
+    "author": "AkiraMotoyoshi",
+    "content_hash": "sha256:02d3864677b74b0fb35b7c79519956ee185ed3cda7dbc01b19555997db951d41",
+    "medium_url": "https://medium.com/furuhashilab/%E4%BA%BA%E5%A4%9A%E3%81%84%E3%81%AA-foss4g-9c3a1c683845",
+    "path": "posts/2026/2026-09-21-人多いなfoss4g.md",
+    "published_at": "2026-09-21T07:06:49+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "人多いな！FOSS4G",
+    "updated_at": "2026-09-21T08:39:08+00:00"
   },
   "9c765ff705ab": {
     "archived_at": "2026-08-17T08:24:24+09:00",
