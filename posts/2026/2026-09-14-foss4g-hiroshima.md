@@ -4,14 +4,14 @@ author: "Miwa Yonekubo"
 medium_url: "https://medium.com/furuhashilab/foss4g-hiroshima-0779c538fb61"
 medium_guid: "0779c538fb61"
 published_at: "2026-09-14T12:06:07+00:00"
-updated_at: "2026-09-16T08:20:13+00:00"
+updated_at: "2026-09-22T08:18:24+00:00"
 archived_at: "2026-09-15T08:26:23+00:00"
 tags: []
 ---
 
 ## 先輩とのFOSS4G での思い出💫
 
-こんにちは、３年のみわです！
+こんにちは、３年の米久保です！
 
 あっという間に夏休みが明けてしまって凄く悲しいです…
 
@@ -57,7 +57,7 @@ tags: []
 
 以下がstravaの記録です！
 
-![](../../assets/images/2026-09-14-foss4g-hiroshima/006.gif)
+![](https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=0779c538fb61)
 
 ---
 
