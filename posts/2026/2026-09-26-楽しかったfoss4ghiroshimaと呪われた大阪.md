@@ -4,14 +4,14 @@ author: "Yudai Kato"
 medium_url: "https://medium.com/furuhashilab/%E6%A5%BD%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9Ffoss4ghiroshima%E3%81%A8%E5%91%AA%E3%82%8F%E3%82%8C%E3%81%9F%E5%A4%A7%E9%98%AA-3c3b5d92c1c3"
 medium_guid: "3c3b5d92c1c3"
 published_at: "2026-09-26T07:09:02+00:00"
-updated_at: "2026-09-26T08:22:19+00:00"
+updated_at: "2026-09-29T09:31:58+00:00"
 archived_at: "2026-09-26T08:22:19+00:00"
 tags: ["foss4g", "hiroshima", "norovirus", "furuhashilab"]
 ---
 
 みなさんこんにちは！Mediumに記事を書くのが久々な気がする古橋研4年の加藤です！みなさんは今年の夏はいかがお過ごしてしたか？私は週一ペースでどこかしらに泊まりに行ったり、ライブに行ったり、バイトしたり、学生最後の夏休みを謳歌していました。疲れたけど。
 
-そんなわけで今回はそんな僕の怒涛の夏休みのラストスパートにボランティアとして参加したFOSS4G Hiroshimaの参加レポートです。
+そんなわけで今回はそんな僕の怒涛の夏休みのラストスパートにボランティアとして参加した[FOSS4G Hiroshima](https://2026.foss4g.org/ja/)の参加レポートです。
 
 **8/31 「お弁当配りニキ」**
 
@@ -33,6 +33,10 @@ Main Conferenceのスタートです！ということでボランティア2日�
 
 Main Conference2日目は午後からphoenix hallの進行アシスタントを行いました。地元広島の高校生が国際会議で発表している姿を横から拝見し、一生懸命に頑張っているみんなに心動かされました。そのあとは休憩なしでGala Dinnerの受付業務へ。これはもう僕の得意分野ですよ。イベントバイトで培った力を存分に発揮させていただきました。（ご飯もおいしかった！）
 
+[Strava | Running, Cycling & Hiking App - Train, Track & Share](https://www.strava.com/activities/20004972064)
+
+広島国際会議場からGala Dinner会場までのStravaのログです。
+
 ![](../../assets/images/2026-09-26-楽しかったfoss4ghiroshimaと呪われた大阪/003.jpeg)
 
 **9/3「音響・照明」**
@@ -50,7 +54,7 @@ Main Conference2日目は午後からphoenix hallの進行アシスタントを�
 ![](../../assets/images/2026-09-26-楽しかったfoss4ghiroshimaと呪われた大阪/004.jpeg)![](../../assets/images/2026-09-26-楽しかったfoss4ghiroshimaと呪われた大阪/005.jpeg)
 > **余談**
 
-宮島で食べた生牡蠣にあたり、大阪で無事死亡。SOTM Asiaを欠席し意識朦朧になりながら一人で先に帰ったとさ。
+宮島で食べた[生牡蠣](https://www2.nupals.ac.jp/~fmfsc/Topics/sheng_mu_liha_an_quanka.html)にあたり、大阪で無事死亡。SOTM Asiaを欠席し意識朦朧になりながら一人で先に帰ったとさ。
 
 ![](../../assets/images/2026-09-26-楽しかったfoss4ghiroshimaと呪われた大阪/006.jpeg)
 
