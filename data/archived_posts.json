@@ -3172,6 +3172,24 @@
     "title": "ゼミ論中間発表",
     "updated_at": "2026-08-17T08:25:28+09:00"
   },
+  "2a965cd535de": {
+    "archived_at": "2026-10-12T10:20:53+00:00",
+    "author": "YAMASAKI RITO",
+    "content_hash": "sha256:38615231841359b5c721bdc7ee48fe66f558ffc43723f08e3e7a5e9ff3900c9b",
+    "medium_url": "https://medium.com/furuhashilab/fotoshi%E3%81%A3%E3%81%A6%E4%BD%95-2a965cd535de",
+    "path": "posts/2026/2026-10-11-fotoshiって何.md",
+    "published_at": "2026-10-11T12:23:06+00:00",
+    "source": "track_a",
+    "tags": [
+      "drones",
+      "gis",
+      "furuhashilab",
+      "students",
+      "fotoshi"
+    ],
+    "title": "Fotoshiって何？",
+    "updated_at": "2026-10-12T10:20:53+00:00"
+  },
   "2a998b0d6472": {
     "archived_at": "2026-08-17T08:39:57+09:00",
     "author": "馬場巽",
@@ -5382,14 +5400,14 @@
   "40e7aa84bb3d": {
     "archived_at": "2026-10-11T09:44:11+00:00",
     "author": "AkiraMotoyoshi",
-    "content_hash": "sha256:5afcdc9355eada1fd6d17791c1cb88047a0557288c5ae1c26456e59a9b09b6ea",
+    "content_hash": "sha256:d1ea831d30d401c121a1fc027cfcde51049cc5e884b337223d186a3366428792",
     "medium_url": "https://medium.com/furuhashilab/overture-maps-%E3%81%A7-%E4%B8%96%E7%95%8C%E3%81%AE%E8%A1%97%E3%82%AB%E3%83%AB%E3%83%86-%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-%E5%90%8C%E3%81%98-sql-%E3%81%A7-5-%E3%81%A4%E3%81%AE%E8%A1%97%E3%82%92%E6%AF%94%E3%81%B9%E3%82%8B-40e7aa84bb3d",
-    "path": "posts/2026/2026-10-11-overture-maps-で世界の街カルテを作った-llm-に任せて-4-時間費用-0-円.md",
+    "path": "posts/2026/2026-10-11-overture-mapを使った世界の街の特性分析.md",
     "published_at": "2026-10-11T07:50:16+00:00",
     "source": "track_a",
     "tags": [],
-    "title": "Overture Maps で「世界の街カルテ」を作った — LLM に任せて 4 時間、費用 0 円",
-    "updated_at": "2026-10-11T09:44:11+00:00"
+    "title": "Overture Mapを使った世界の街の特性分析",
+    "updated_at": "2026-10-12T10:20:57+00:00"
   },
   "4134085d9995": {
     "archived_at": "2026-08-17T08:31:35+09:00",
@@ -24266,6 +24284,18 @@
     ],
     "title": "コンビニの商品配置を観察してみた！【デザイン１週報】",
     "updated_at": "2026-08-17T08:03:15+09:00"
+  },
+  "fa6c7341278d": {
+    "archived_at": "2026-10-12T10:20:51+00:00",
+    "author": "Shota Arakawa",
+    "content_hash": "sha256:c58c6dca70eaab589fb32eb61f9a20597e3214c86956df12ffb6de11ab93457b",
+    "medium_url": "https://medium.com/furuhashilab/gis%E3%81%AB%E9%A6%B4%E6%9F%93%E3%81%BF%E3%81%8C%E3%81%AA%E3%81%84%E4%BA%BA%E3%81%A7%E3%82%82-%E5%9C%B0%E5%9B%B3%E3%81%AB%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%82%81%E3%82%8B-terra-draw%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F-fa6c7341278d",
+    "path": "posts/2026/2026-10-12-gisに馴染みがない人でも地図に書き込める-terra-drawを試してみた.md",
+    "published_at": "2026-10-12T06:27:46+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "GISに馴染みがない人でも、地図に書き込める？ ── Terra Drawを試してみた",
+    "updated_at": "2026-10-12T10:20:51+00:00"
   },
   "fa8b6fedf0d1": {
     "archived_at": "2026-08-17T08:05:38+09:00",
