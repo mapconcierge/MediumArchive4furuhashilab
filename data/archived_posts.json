@@ -3637,6 +3637,18 @@
     "title": "ハッカソン(4/7〜4/9) チーム依田",
     "updated_at": "2026-08-17T08:45:40+09:00"
   },
+  "2eb364c09b67": {
+    "archived_at": "2026-10-13T10:11:21+00:00",
+    "author": "Kanoko Fujiwara",
+    "content_hash": "sha256:dd78a1f88ca50595d4e7e2d376ae939df902a5f9777e582073e9f37e8a1cabae",
+    "medium_url": "https://medium.com/furuhashilab/re-earth-visualizer-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E6%80%9D%E3%81%84%E5%87%BA%E3%83%9E%E3%83%83%E3%83%97%E3%81%A5%E3%81%8F%E3%82%8A-2eb364c09b67",
+    "path": "posts/2026/2026-10-13-reearth-visualizer-を使った思い出マップづくり.md",
+    "published_at": "2026-10-13T01:05:27+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "Re:Earth Visualizer を使った思い出マップづくり",
+    "updated_at": "2026-10-13T10:11:21+00:00"
+  },
   "2ec0747f6c09": {
     "archived_at": "2026-08-17T08:32:48+09:00",
     "author": "NATSUMI HAGA",
@@ -4883,6 +4895,18 @@
     ],
     "title": "国際会議にてポスターセッション＠FOSS4G ASIA 2024, Thai, Bangkok",
     "updated_at": "2026-08-17T08:15:40+09:00"
+  },
+  "3c329bcc90fb": {
+    "archived_at": "2026-10-13T10:11:13+00:00",
+    "author": "Minato Tanabe",
+    "content_hash": "sha256:cd87ec9a1f9c5500524ae3f455e1b45630def310b57faac2f7abb411c119cbda",
+    "medium_url": "https://medium.com/furuhashilab/sotm-asia-2026%E3%82%92%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91%E3%81%AB-%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%AC%E3%83%BC%E3%82%B6%E3%81%A7%E4%BC%8A%E8%B1%86%E3%81%AE%E8%97%BB%E5%A0%B4%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%92%E5%8F%AF%E8%A6%96%E5%8C%96%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F-3c329bcc90fb",
+    "path": "posts/2026/2026-10-13-sotm-asia-2026をきっかけにグリーンレーザで伊豆の藻場ポテンシャルを可視化してみた.md",
+    "published_at": "2026-10-13T02:45:44+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "SotM Asia 2026をきっかけに、グリーンレーザで伊豆の藻場ポテンシャルを可視化してみた",
+    "updated_at": "2026-10-13T10:11:13+00:00"
   },
   "3c3b5d92c1c3": {
     "archived_at": "2026-09-26T08:22:19+00:00",
@@ -6195,6 +6219,18 @@
     "title": "ingress FS 参加報告",
     "updated_at": "2026-08-17T08:48:38+09:00"
   },
+  "489c4e94045b": {
+    "archived_at": "2026-10-13T10:11:23+00:00",
+    "author": "SAKURA NAKAMIZO",
+    "content_hash": "sha256:07d787690e2555421082c054f52c6e7619dd76424b3dc78c915272fe110a40ba",
+    "medium_url": "https://medium.com/furuhashilab/claude-code%E3%81%A7%E6%85%B6%E8%89%AF%E9%96%93%E8%AB%B8%E5%B3%B6%E3%81%AE%E3%83%80%E3%82%A4%E3%83%93%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88%E8%A8%BA%E6%96%AD%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F-%E5%8F%A4%E6%A9%8B%E3%82%BC%E3%83%9F%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B32026-489c4e94045b",
+    "path": "posts/2026/2026-10-12-claude-codeで慶良間諸島のダイビングスポット診断アプリを作ってみた古橋ゼミオンラインハッカソン2026.md",
+    "published_at": "2026-10-12T23:50:53+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "Claude Codeで慶良間諸島のダイビングスポット診断アプリを作ってみた！｜古橋ゼミオンラインハッカソン2026",
+    "updated_at": "2026-10-13T10:11:23+00:00"
+  },
   "48adc957fab4": {
     "archived_at": "2026-08-17T08:58:34+09:00",
     "author": "Kouki Takesue",
@@ -6538,6 +6574,24 @@
     ],
     "title": "地図に建物って載ってる？",
     "updated_at": "2026-08-17T09:03:58+09:00"
+  },
+  "4c7d05ec08a8": {
+    "archived_at": "2026-10-13T10:11:19+00:00",
+    "author": "Mihiro Takizawa",
+    "content_hash": "sha256:d191f32cb70c045224299da8f2dc4c142d51547b088f77f419bb57fd3571acdc",
+    "medium_url": "https://medium.com/furuhashilab/10%E6%9C%88%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-%E7%9B%B8%E6%A8%A1%E5%8E%9F%E5%B8%82%E3%81%AE%E8%BB%8A%E6%A4%85%E5%AD%90%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9E%E3%83%83%E3%83%97%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F-4c7d05ec08a8",
+    "path": "posts/2026/2026-10-13-10月ハッカソン相模原市の車椅子アクセスマップを作ってみた.md",
+    "published_at": "2026-10-13T01:24:39+00:00",
+    "source": "track_a",
+    "tags": [
+      "claude-code-tips",
+      "weedmaps",
+      "claude-code-skills",
+      "claude-code",
+      "furuhashilab"
+    ],
+    "title": "10月ハッカソン「相模原市の車椅子アクセスマップを作ってみた」",
+    "updated_at": "2026-10-13T10:11:19+00:00"
   },
   "4caf48f06014": {
     "archived_at": "2026-08-17T08:05:53+09:00",
@@ -8178,6 +8232,18 @@
     "title": "九州の豪雨被害のクライシスマッピング",
     "updated_at": "2026-08-17T08:41:56+09:00"
   },
+  "5a96531521d7": {
+    "archived_at": "2026-10-13T10:11:24+00:00",
+    "author": "Fuka Okamura",
+    "content_hash": "sha256:a3faf8f09a4606f0d4ddf4bbdf33ef0c8e11648a6269c4cf3c85a03179faf523",
+    "medium_url": "https://medium.com/furuhashilab/panoramax%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F-5a96531521d7",
+    "path": "posts/2026/2026-10-12-claude-codeを使ってpanoramaxにアップロードした写真を地図上に反映してみた.md",
+    "published_at": "2026-10-12T21:55:16+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "Claude Codeを使ってPanoramaxにアップロードした写真を地図上に反映してみた！",
+    "updated_at": "2026-10-13T10:11:24+00:00"
+  },
   "5a9eef652269": {
     "archived_at": "2026-08-17T08:43:14+09:00",
     "author": "川嶋彩香",
@@ -8395,6 +8461,24 @@
     "tags": [],
     "title": "まさかの参加！？NASA Space Apps Challenge (10/20)",
     "updated_at": "2026-08-17T08:48:32+09:00"
+  },
+  "5c7ff021ba83": {
+    "archived_at": "2026-10-13T10:11:21+00:00",
+    "author": "Hinako Terado",
+    "content_hash": "sha256:2f44c7e50bfbe987e0dca3fe3a05347184bbce268ad6bc0e3f92eb5f89d53c4a",
+    "medium_url": "https://medium.com/furuhashilab/%E9%9D%92%E3%82%AD%E3%83%A3%E3%83%B3%E3%81%8B%E3%82%89%E3%81%95%E3%81%8C%E3%82%AD%E3%83%A3%E3%83%B3%E3%81%B8-45km%E3%81%AE%E9%81%93%E3%81%AE%E3%82%8A%E3%82%92%E8%A8%98%E9%8C%B2-%E9%80%94%E4%B8%AD%E3%81%BE%E3%81%A7-5c7ff021ba83",
+    "path": "posts/2026/2026-10-13-青キャンからさがキャンへ45kmの道のりを記録途中まで.md",
+    "published_at": "2026-10-13T00:41:55+00:00",
+    "source": "track_a",
+    "tags": [
+      "claude-code",
+      "furuhashilab",
+      "fotoshi",
+      "hackaton",
+      "yamap"
+    ],
+    "title": "青キャンからさがキャンへ！45kmの道のりを記録(途中まで)",
+    "updated_at": "2026-10-13T10:11:21+00:00"
   },
   "5c9fb780545c": {
     "archived_at": "2026-08-17T08:13:55+09:00",
@@ -10063,6 +10147,18 @@
     "tags": [],
     "title": "Youth週報4/25",
     "updated_at": "2026-08-17T08:28:33+09:00"
+  },
+  "6f5727639012": {
+    "archived_at": "2026-10-13T10:11:15+00:00",
+    "author": "Moe Anjo",
+    "content_hash": "sha256:5df7484872205050f68c2d79becd73a654ddb7d28ebf5a23d57bcd8649984e5a",
+    "medium_url": "https://medium.com/furuhashilab/%E4%B8%AD%E5%B4%8E%E7%94%BA-%E6%B0%B4%E5%AE%B3%E6%99%82%E3%81%AE3d-%E9%81%BF%E9%9B%A3%E3%83%9E%E3%83%83%E3%83%97-6f5727639012",
+    "path": "posts/2026/2026-10-13-中崎町-水害時の3d避難マップ.md",
+    "published_at": "2026-10-13T02:02:10+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "中崎町 水害時の3D￼避難マップ",
+    "updated_at": "2026-10-13T10:11:15+00:00"
   },
   "6f768824a528": {
     "archived_at": "2026-08-17T08:22:01+09:00",
@@ -17638,6 +17734,18 @@
     "title": "ついにJICAのお力になれる日が！",
     "updated_at": "2026-08-17T08:41:34+09:00"
   },
+  "ba2243a3a27f": {
+    "archived_at": "2026-10-13T10:11:19+00:00",
+    "author": "SATOAKI",
+    "content_hash": "sha256:2366c8a4e5359d7a1316a4832b9ab926b032e77aee0b3787ec2c07abcabf959a",
+    "medium_url": "https://medium.com/furuhashilab/2026-10-13-ba2243a3a27f",
+    "path": "posts/2026/2026-10-13-趣味に全振り論文古文書の地質図を-maplat-で地図に乗せて京都の天然砥石の採れる場所を確かめてみた.md",
+    "published_at": "2026-10-13T01:34:03+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "趣味に全振り：論文＆古文書の地質図を Maplat で地図に乗せて、京都の天然砥石の「採れる場所」を確かめてみた",
+    "updated_at": "2026-10-13T10:11:19+00:00"
+  },
   "ba24db54b922": {
     "archived_at": "2026-08-17T08:05:15+09:00",
     "author": "Fuka Okamura",
@@ -18354,6 +18462,18 @@
     "tags": [],
     "title": "ゼミ論進捗",
     "updated_at": "2026-08-17T09:09:22+09:00"
+  },
+  "c27095fb6476": {
+    "archived_at": "2026-10-13T10:11:16+00:00",
+    "author": "Tomoya Aiko",
+    "content_hash": "sha256:6b6419847794ab1c02c088382b7a63788600cc3211401599f8a58322e073e297",
+    "medium_url": "https://medium.com/furuhashilab/%E5%B8%B0%E7%9C%81%E3%81%8C%E5%BE%85%E3%81%A1%E3%81%8D%E3%82%8C%E3%81%AA%E3%81%84%E3%81%8B%E3%82%89cesiumjs%E3%81%A7%E5%9C%B0%E5%85%83%E4%BD%9C%E3%81%A3%E3%81%A1%E3%82%83%E3%81%A3%E3%81%9F%E3%82%88-c27095fb6476",
+    "path": "posts/2026/2026-10-13-帰省が待ちきれないからcesiumjsで地元作っちゃったよ.md",
+    "published_at": "2026-10-13T01:58:16+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "帰省が待ちきれないからCesiumJSで地元作っちゃったよ、、、",
+    "updated_at": "2026-10-13T10:11:16+00:00"
   },
   "c27520b9ad80": {
     "archived_at": "2026-08-17T08:19:28+09:00",
@@ -24381,6 +24501,18 @@
     ],
     "title": "TEDx会場設計方法決定？！",
     "updated_at": "2026-08-17T08:41:35+09:00"
+  },
+  "fae22399b940": {
+    "archived_at": "2026-10-13T10:11:15+00:00",
+    "author": "KOSAKU NAKAGAWA",
+    "content_hash": "sha256:45adfa95d66ab85d18d8bfabf17705c8817318a6f2bab47c47786d3e0f5bfedc",
+    "medium_url": "https://medium.com/furuhashilab/overture-maps%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E9%9D%92%E5%B1%B1%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E5%91%A8%E8%BE%BA%E3%81%AE%E5%9C%B0%E5%9B%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F-fae22399b940",
+    "path": "posts/2026/2026-10-13-overture-mapsを使って青山学院大学周辺の地図を作ってみた.md",
+    "published_at": "2026-10-13T02:31:08+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "Overture Mapsを使って青山学院大学周辺の地図を作ってみた！",
+    "updated_at": "2026-10-13T10:11:15+00:00"
   },
   "fb1991aa039e": {
     "archived_at": "2026-08-17T08:33:35+09:00",
