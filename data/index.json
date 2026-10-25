@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "guid": "7aa965247336",
+      "title": "【デザイン2】",
+      "author": "Moe Anjo",
+      "author_username": "",
+      "path": "posts/2026/2026-10-25-デザイン2.md",
+      "medium_url": "https://medium.com/furuhashilab/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B32-7aa965247336",
+      "published_at": "2026-10-25T05:55:21+00:00",
+      "updated_at": "2026-10-25T08:10:03+00:00",
+      "tags": []
+    },
+    {
       "guid": "2479f79f9a8d",
       "title": "【横瀬部週報】横瀬インターン第2陣が終了！今回は何してきたん？",
       "author": "INOUE RENSEI",
