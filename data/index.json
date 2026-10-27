@@ -1,6 +1,65 @@
 {
   "posts": [
     {
+      "guid": "cc032c7bf684",
+      "title": "【VF週報】今更すぎる︎^^;研究室紹介動画制作の振り返り",
+      "author": "Himari Nonaka",
+      "author_username": "",
+      "path": "posts/2026/2026-10-26-vf週報今更すぎる研究室紹介動画制作の振り返り.md",
+      "medium_url": "https://medium.com/furuhashilab/vf%E9%80%B1%E5%A0%B1-%E4%BB%8A%E6%9B%B4%E3%81%99%E3%81%8E%E3%82%8B%EF%B8%8E-%E7%A0%94%E7%A9%B6%E5%AE%A4%E7%B4%B9%E4%BB%8B%E5%8B%95%E7%94%BB%E5%88%B6%E4%BD%9C%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A-cc032c7bf684",
+      "published_at": "2026-10-26T17:31:32+00:00",
+      "updated_at": "2026-10-27T08:42:36+00:00",
+      "tags": []
+    },
+    {
+      "guid": "6f2b43bab48d",
+      "title": "ドローン部2 週報｜③UI・ゲームルール担当",
+      "author": "YUTO Watanabe",
+      "author_username": "",
+      "path": "posts/2026/2026-10-26-ドローン部2-週報③uiゲームルール担当.md",
+      "medium_url": "https://medium.com/furuhashilab/%E3%83%89%E3%83%AD%E3%83%BC%E3%83%B3%E9%83%A82-%E9%80%B1%E5%A0%B1-%E2%91%A2ui-%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%AB%E3%83%BC%E3%83%AB%E6%8B%85%E5%BD%93-6f2b43bab48d",
+      "published_at": "2026-10-26T16:00:36+00:00",
+      "updated_at": "2026-10-27T08:42:36+00:00",
+      "tags": []
+    },
+    {
+      "guid": "9c20bd61480f",
+      "title": "Drone Territory開発記録：GitHubでの共同開発と飛行ログ解析の進捗",
+      "author": "KOSAKU NAKAGAWA",
+      "author_username": "",
+      "path": "posts/2026/2026-10-26-drone-territory開発記録githubでの共同開発と飛行ログ解析の進捗.md",
+      "medium_url": "https://medium.com/furuhashilab/drone-territory%E9%96%8B%E7%99%BA%E8%A8%98%E9%8C%B2-github%E3%81%A7%E3%81%AE%E5%85%B1%E5%90%8C%E9%96%8B%E7%99%BA%E3%81%A8%E9%A3%9B%E8%A1%8C%E3%83%AD%E3%82%B0%E8%A7%A3%E6%9E%90%E3%81%AE%E9%80%B2%E6%8D%97-9c20bd61480f",
+      "published_at": "2026-10-26T15:44:44+00:00",
+      "updated_at": "2026-10-27T08:42:38+00:00",
+      "tags": []
+    },
+    {
+      "guid": "7a4c6d7514dd",
+      "title": "カービィのアニメーションを作ろう1️⃣",
+      "author": "Mihiro Takizawa",
+      "author_username": "",
+      "path": "posts/2026/2026-10-26-カービィのアニメーションを作ろう1.md",
+      "medium_url": "https://medium.com/furuhashilab/%E3%81%BF%E3%81%B2%E3%82%8D-7a4c6d7514dd",
+      "published_at": "2026-10-26T15:25:44+00:00",
+      "updated_at": "2026-10-27T08:42:38+00:00",
+      "tags": [
+        "blended-learning",
+        "kirby",
+        "blender"
+      ]
+    },
+    {
+      "guid": "d877c22f8619",
+      "title": "Youth① マッピングパーティー？マッパソン？の開催に向けて",
+      "author": "Fuka Okamura",
+      "author_username": "",
+      "path": "posts/2026/2026-10-26-youth①-マッピングパーティーマッパソンの開催に向けて.md",
+      "medium_url": "https://medium.com/furuhashilab/youth%E2%91%A0-%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC-%E3%83%9E%E3%83%83%E3%83%91%E3%82%BD%E3%83%B3-%E3%81%AE%E9%96%8B%E5%82%AC%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6-d877c22f8619",
+      "published_at": "2026-10-26T13:43:17+00:00",
+      "updated_at": "2026-10-27T08:42:42+00:00",
+      "tags": []
+    },
+    {
       "guid": "66a43f71f4b2",
       "title": "【Youth2週報】イベント係として、これからやってみたいこと！",
       "author": "REARA KATO",
@@ -8,7 +67,7 @@
       "path": "posts/2026/2026-10-25-youth2週報イベント係としてこれからやってみたいこと.md",
       "medium_url": "https://medium.com/furuhashilab/youth2%E9%80%B1%E5%A0%B1-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%BF%82%E3%81%A8%E3%81%97%E3%81%A6-%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8-66a43f71f4b2",
       "published_at": "2026-10-25T13:51:05+00:00",
-      "updated_at": "2026-10-26T08:35:42+00:00",
+      "updated_at": "2026-10-27T08:42:43+00:00",
       "tags": []
     },
     {
@@ -19,18 +78,18 @@
       "path": "posts/2026/2026-10-25-横瀬部勝手にハッカソンmuseを使ってみた.md",
       "medium_url": "https://medium.com/furuhashilab/%E6%A8%AA%E7%80%AC%E9%83%A8-%E5%8B%9D%E6%89%8B%E3%81%AB%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-muse%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F-cc8d0f49aef0",
       "published_at": "2026-10-25T08:58:58+00:00",
-      "updated_at": "2026-10-26T08:35:42+00:00",
+      "updated_at": "2026-10-27T08:42:43+00:00",
       "tags": []
     },
     {
       "guid": "7aa965247336",
-      "title": "【デザイン2】",
+      "title": "【デザイン2】Blender進捗報告",
       "author": "Moe Anjo",
       "author_username": "",
-      "path": "posts/2026/2026-10-25-デザイン2.md",
+      "path": "posts/2026/2026-10-25-デザイン2blender進捗報告.md",
       "medium_url": "https://medium.com/furuhashilab/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B32-7aa965247336",
       "published_at": "2026-10-25T05:55:21+00:00",
-      "updated_at": "2026-10-26T08:35:43+00:00",
+      "updated_at": "2026-10-27T08:42:44+00:00",
       "tags": []
     },
     {
