@@ -434,6 +434,18 @@
     "title": "【ゼミ論中間発表】",
     "updated_at": "2026-11-10T10:50:44+00:00"
   },
+  "0c4f82f9cf70": {
+    "archived_at": "2026-11-23T11:54:36+00:00",
+    "author": "Shota Arakawa",
+    "content_hash": "sha256:0e3ed9ec2201ef759b459894f5f9c4ca84ebe4ceb15bcfc4b242028e9c35a3af",
+    "medium_url": "https://medium.com/furuhashilab/sns%E3%81%A7%E3%82%88%E3%81%8F%E8%A6%8B%E3%81%8B%E3%81%91%E3%82%8Bai%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E5%8B%95%E7%94%BB%E3%82%92mese%E3%81%AB%E4%BD%9C%E3%82%89%E3%81%9B%E3%81%A6%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%81%AB%E8%87%AA%E5%8B%95%E6%8A%95%E7%A8%BF%E3%81%99%E3%82%8B%E3%81%A8%E3%81%93%E3%82%8D%E3%81%BE%E3%81%A7%E4%BB%BB%E3%81%9B%E3%81%A6%E3%81%BF%E3%81%9F-0c4f82f9cf70",
+    "path": "posts/2026/2026-11-23-snsでよく見かけるaiショート動画をmeseに作らせてインスタに自動投稿するところまで任せてみた.md",
+    "published_at": "2026-11-23T06:47:26+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "SNSでよく見かけるAIショート動画をMeseに作らせてインスタに自動投稿するところまで任せてみた",
+    "updated_at": "2026-11-23T11:54:36+00:00"
+  },
   "0c975332459d": {
     "archived_at": "2026-08-17T08:07:03+09:00",
     "author": "Kouna Fukuda",
@@ -930,6 +942,18 @@
     "tags": [],
     "title": "デザイン部合宿いつにする？",
     "updated_at": "2026-08-17T08:31:23+09:00"
+  },
+  "13d0bbf5de22": {
+    "archived_at": "2026-11-23T11:54:34+00:00",
+    "author": "AkiraMotoyoshi",
+    "content_hash": "sha256:427101c96f68a0ae18485a227a3b779274ec56f17a8910ab652e4e31adfcda70",
+    "medium_url": "https://medium.com/furuhashilab/%E7%8F%BE%E4%BB%A3%E7%89%88%E8%8A%B1%E5%92%B2%E3%81%8B%E7%88%BA%E3%81%95%E3%82%93-sns%E3%81%AB%E8%8A%B1%E7%95%91%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86-13d0bbf5de22",
+    "path": "posts/2026/2026-11-23-現代版花咲か爺さんsnsに花畑を作ってみよう.md",
+    "published_at": "2026-11-23T08:12:33+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "現代版花咲か爺さん。SNSに花畑を作ってみよう",
+    "updated_at": "2026-11-23T11:54:34+00:00"
   },
   "1423f4794134": {
     "archived_at": "2026-08-17T08:00:39+09:00",
@@ -4703,6 +4727,18 @@
     "title": "卒論中間発表",
     "updated_at": "2026-11-10T10:50:41+00:00"
   },
+  "39ac753c0739": {
+    "archived_at": "2026-11-23T11:54:31+00:00",
+    "author": "YUTO Watanabe",
+    "content_hash": "sha256:366e9502ec8f062042b49211165e7154d132708e190fb32eeb680efc6ea62d64",
+    "medium_url": "https://medium.com/furuhashilab/muse%E3%81%AB%E6%AF%8E%E6%97%A5%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E6%8A%95%E7%A8%BF%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%81%9F-39ac753c0739",
+    "path": "posts/2026/2026-11-23-museに毎日ゲームを作って投稿させてみた.md",
+    "published_at": "2026-11-23T09:23:52+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "Museに毎日ゲームを作って投稿させてみた",
+    "updated_at": "2026-11-23T11:54:31+00:00"
+  },
   "39d5be03d468": {
     "archived_at": "2026-08-17T08:28:40+09:00",
     "author": "NATSUMI HAGA",
@@ -5290,6 +5326,18 @@
     ],
     "title": "ガーメントプリンター使用方法の巻",
     "updated_at": "2026-08-17T08:10:32+09:00"
+  },
+  "3e84e77adc24": {
+    "archived_at": "2026-11-23T11:54:38+00:00",
+    "author": "USUI CHIHANA",
+    "content_hash": "sha256:e8306bce7e057ae83a27c9e57176e339fcd3546fd21f480bb426a78082be7116",
+    "medium_url": "https://medium.com/furuhashilab/%E4%B8%80%E5%B9%B4%E5%89%8D-ai%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E6%84%9F%E3%81%98%E3%81%A0%E3%81%A3%E3%81%9F-11%E6%9C%88%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-3e84e77adc24",
+    "path": "posts/2026/2026-11-22-一年前aiってどんな感じだった11月ハッカソン.md",
+    "published_at": "2026-11-22T18:01:28+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "一年前、AIってどんな感じだった？【11月ハッカソン】",
+    "updated_at": "2026-11-23T11:54:38+00:00"
   },
   "3e93e1b2ced5": {
     "archived_at": "2026-08-17T08:38:36+09:00",
@@ -6044,6 +6092,24 @@
     ],
     "title": "麗澤大学にてニセコ高校生とマッピング／与論島の耕作地マッピングに挑戦（週報）",
     "updated_at": "2026-08-17T08:12:46+09:00"
+  },
+  "45b22fb67d67": {
+    "archived_at": "2026-11-23T11:54:37+00:00",
+    "author": "YAMASAKI RITO",
+    "content_hash": "sha256:d3caaf24c28a3bd97ecb565e600f28e20c802bc9cab7d578b809fe7a8f5a21da",
+    "medium_url": "https://medium.com/furuhashilab/muse%E3%81%A0%E3%81%91%E3%81%A71%E6%97%A51%E3%82%B2%E3%83%BC%E3%83%A0%E4%BD%9C%E3%81%A3%E3%81%A6sns%E3%81%AB%E8%87%AA%E5%8B%95%E6%8A%95%E7%A8%BF%E3%81%99%E3%82%8B%E8%87%AA%E5%8B%95%E5%8C%96-11%E6%9C%88%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-45b22fb67d67",
+    "path": "posts/2026/2026-11-23-museだけで1日1ゲーム作ってsnsに自動投稿する自動化-11月ハッカソン.md",
+    "published_at": "2026-11-23T00:21:52+00:00",
+    "source": "track_a",
+    "tags": [
+      "japan",
+      "muse",
+      "ai-agent",
+      "ai",
+      "meta"
+    ],
+    "title": "Museだけで1日1ゲーム作ってSNSに自動投稿する自動化 — 11月ハッカソン",
+    "updated_at": "2026-11-23T11:54:37+00:00"
   },
   "45b6a074086b": {
     "archived_at": "2026-08-17T08:48:43+09:00",
@@ -11194,6 +11260,21 @@
     ],
     "title": "今週のおまめ",
     "updated_at": "2026-08-17T09:00:02+09:00"
+  },
+  "75d3a7965a2c": {
+    "archived_at": "2026-11-23T11:54:34+00:00",
+    "author": "Mihiro Takizawa",
+    "content_hash": "sha256:48e2c83ef6da91aae91d0c7888532ced8de879af44ea535b1eb9c99accd8c5fb",
+    "medium_url": "https://medium.com/furuhashilab/%E3%80%87%E3%80%87%E3%82%92%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%81%9F-75d3a7965a2c",
+    "path": "posts/2026/2026-11-23-〇〇を自動化させてみた.md",
+    "published_at": "2026-11-23T08:42:45+00:00",
+    "source": "track_a",
+    "tags": [
+      "furuhashi",
+      "furuhashilab"
+    ],
+    "title": "〇〇を自動化させてみた",
+    "updated_at": "2026-11-23T11:54:34+00:00"
   },
   "75e46fdc7b2b": {
     "archived_at": "2026-08-17T08:31:00+09:00",
@@ -22626,6 +22707,18 @@
     "tags": [],
     "title": "12月画像生成ハッカソン",
     "updated_at": "2026-08-17T08:19:45+09:00"
+  },
+  "e56b4fadef92": {
+    "archived_at": "2026-11-23T11:54:40+00:00",
+    "author": "Fuka Okamura",
+    "content_hash": "sha256:0816ee978a42379898b754559ed1f456aef86f834e32a9056e69d3459b10e97e",
+    "medium_url": "https://medium.com/furuhashilab/muse%E3%81%ABsns%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%A6%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F-e56b4fadef92",
+    "path": "posts/2026/2026-11-22-museにsns投稿してもらった.md",
+    "published_at": "2026-11-22T13:40:34+00:00",
+    "source": "track_a",
+    "tags": [],
+    "title": "MuseにSNS投稿してもらった。",
+    "updated_at": "2026-11-23T11:54:40+00:00"
   },
   "e571c16e7910": {
     "archived_at": "2026-08-17T08:26:51+09:00",

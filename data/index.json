@@ -1,6 +1,92 @@
 {
   "posts": [
     {
+      "guid": "39ac753c0739",
+      "title": "Museに毎日ゲームを作って投稿させてみた",
+      "author": "YUTO Watanabe",
+      "author_username": "",
+      "path": "posts/2026/2026-11-23-museに毎日ゲームを作って投稿させてみた.md",
+      "medium_url": "https://medium.com/furuhashilab/muse%E3%81%AB%E6%AF%8E%E6%97%A5%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E6%8A%95%E7%A8%BF%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%81%9F-39ac753c0739",
+      "published_at": "2026-11-23T09:23:52+00:00",
+      "updated_at": "2026-11-23T11:54:31+00:00",
+      "tags": []
+    },
+    {
+      "guid": "75d3a7965a2c",
+      "title": "〇〇を自動化させてみた",
+      "author": "Mihiro Takizawa",
+      "author_username": "",
+      "path": "posts/2026/2026-11-23-〇〇を自動化させてみた.md",
+      "medium_url": "https://medium.com/furuhashilab/%E3%80%87%E3%80%87%E3%82%92%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%81%9F-75d3a7965a2c",
+      "published_at": "2026-11-23T08:42:45+00:00",
+      "updated_at": "2026-11-23T11:54:34+00:00",
+      "tags": [
+        "furuhashi",
+        "furuhashilab"
+      ]
+    },
+    {
+      "guid": "13d0bbf5de22",
+      "title": "現代版花咲か爺さん。SNSに花畑を作ってみよう",
+      "author": "AkiraMotoyoshi",
+      "author_username": "",
+      "path": "posts/2026/2026-11-23-現代版花咲か爺さんsnsに花畑を作ってみよう.md",
+      "medium_url": "https://medium.com/furuhashilab/%E7%8F%BE%E4%BB%A3%E7%89%88%E8%8A%B1%E5%92%B2%E3%81%8B%E7%88%BA%E3%81%95%E3%82%93-sns%E3%81%AB%E8%8A%B1%E7%95%91%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86-13d0bbf5de22",
+      "published_at": "2026-11-23T08:12:33+00:00",
+      "updated_at": "2026-11-23T11:54:34+00:00",
+      "tags": []
+    },
+    {
+      "guid": "0c4f82f9cf70",
+      "title": "SNSでよく見かけるAIショート動画をMeseに作らせてインスタに自動投稿するところまで任せてみた",
+      "author": "Shota Arakawa",
+      "author_username": "",
+      "path": "posts/2026/2026-11-23-snsでよく見かけるaiショート動画をmeseに作らせてインスタに自動投稿するところまで任せてみた.md",
+      "medium_url": "https://medium.com/furuhashilab/sns%E3%81%A7%E3%82%88%E3%81%8F%E8%A6%8B%E3%81%8B%E3%81%91%E3%82%8Bai%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E5%8B%95%E7%94%BB%E3%82%92mese%E3%81%AB%E4%BD%9C%E3%82%89%E3%81%9B%E3%81%A6%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%81%AB%E8%87%AA%E5%8B%95%E6%8A%95%E7%A8%BF%E3%81%99%E3%82%8B%E3%81%A8%E3%81%93%E3%82%8D%E3%81%BE%E3%81%A7%E4%BB%BB%E3%81%9B%E3%81%A6%E3%81%BF%E3%81%9F-0c4f82f9cf70",
+      "published_at": "2026-11-23T06:47:26+00:00",
+      "updated_at": "2026-11-23T11:54:36+00:00",
+      "tags": []
+    },
+    {
+      "guid": "45b22fb67d67",
+      "title": "Museだけで1日1ゲーム作ってSNSに自動投稿する自動化 — 11月ハッカソン",
+      "author": "YAMASAKI RITO",
+      "author_username": "",
+      "path": "posts/2026/2026-11-23-museだけで1日1ゲーム作ってsnsに自動投稿する自動化-11月ハッカソン.md",
+      "medium_url": "https://medium.com/furuhashilab/muse%E3%81%A0%E3%81%91%E3%81%A71%E6%97%A51%E3%82%B2%E3%83%BC%E3%83%A0%E4%BD%9C%E3%81%A3%E3%81%A6sns%E3%81%AB%E8%87%AA%E5%8B%95%E6%8A%95%E7%A8%BF%E3%81%99%E3%82%8B%E8%87%AA%E5%8B%95%E5%8C%96-11%E6%9C%88%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-45b22fb67d67",
+      "published_at": "2026-11-23T00:21:52+00:00",
+      "updated_at": "2026-11-23T11:54:37+00:00",
+      "tags": [
+        "japan",
+        "muse",
+        "ai-agent",
+        "ai",
+        "meta"
+      ]
+    },
+    {
+      "guid": "3e84e77adc24",
+      "title": "一年前、AIってどんな感じだった？【11月ハッカソン】",
+      "author": "USUI CHIHANA",
+      "author_username": "",
+      "path": "posts/2026/2026-11-22-一年前aiってどんな感じだった11月ハッカソン.md",
+      "medium_url": "https://medium.com/furuhashilab/%E4%B8%80%E5%B9%B4%E5%89%8D-ai%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E6%84%9F%E3%81%98%E3%81%A0%E3%81%A3%E3%81%9F-11%E6%9C%88%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-3e84e77adc24",
+      "published_at": "2026-11-22T18:01:28+00:00",
+      "updated_at": "2026-11-23T11:54:38+00:00",
+      "tags": []
+    },
+    {
+      "guid": "e56b4fadef92",
+      "title": "MuseにSNS投稿してもらった。",
+      "author": "Fuka Okamura",
+      "author_username": "",
+      "path": "posts/2026/2026-11-22-museにsns投稿してもらった.md",
+      "medium_url": "https://medium.com/furuhashilab/muse%E3%81%ABsns%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%A6%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F-e56b4fadef92",
+      "published_at": "2026-11-22T13:40:34+00:00",
+      "updated_at": "2026-11-23T11:54:40+00:00",
+      "tags": []
+    },
+    {
       "guid": "49039fedde59",
       "title": "【横瀬部週報】寺坂棚田って、誰がどうやって維持してるの？",
       "author": "INOUE RENSEI",
