@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "guid": "0b10be62ed31",
+      "title": "Youth1週報",
+      "author": "Minato Tanabe",
+      "author_username": "",
+      "path": "posts/2026/2026-11-27-youth1週報.md",
+      "medium_url": "https://medium.com/furuhashilab/youth1%E9%80%B1%E5%A0%B1-0b10be62ed31",
+      "published_at": "2026-11-27T17:02:51+00:00",
+      "updated_at": "2026-11-28T11:25:59+00:00",
+      "tags": []
+    },
+    {
       "guid": "547136ac899e",
       "title": "Museに視覚ASMR動画を作成・自動投稿させてみた！",
       "author": "KOSAKU NAKAGAWA",
